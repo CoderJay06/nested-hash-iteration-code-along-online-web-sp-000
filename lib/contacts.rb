@@ -17,7 +17,7 @@ require 'pry'
 def remove_strawberry(contacts)
   contacts.each do |keys, values|
     values.each do |key, value|
-      contacts.delete_if {key == "value.include?("strawberry")
+      contacts.delete_if {key == "favorite_ice_cream_flavors:" && value.include?("strawberry")}
     end 
   end 
 end
